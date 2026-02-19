@@ -1,5 +1,5 @@
 const post = async (url, data = {}) => {
-  let baseUrl = 'https://www.yoozhi.cn/api/';
+  let baseUrl = import.meta.env.VITE_API_BASE_URL;
   const openid = uni.getStorageSync('openid') || '';
   const token = uni.getStorageSync('token') || ''; // 读取本地存储的 auth token
 
